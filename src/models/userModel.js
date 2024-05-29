@@ -4,6 +4,7 @@ const userSchema = new mongoose.Schema(
     username: {
       type: String,
       required: true,
+
       minlength: 6,
       maxlength: 30,
       unique: true,
@@ -19,7 +20,7 @@ const userSchema = new mongoose.Schema(
       minlength: 6,
     },
   },
-    { timestamps: true }
+  { timestamps: true }
 );
 
 module.exports = mongoose.model("User", userSchema);
